@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSalePoint Home Page</title>
+    <link rel="stylesheet" href="/HomePage.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/script/homePage.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation container -->
+    <div class="header-container">
+
+        <!-- Hidden container for quick search -->
+        <div id="search-field">
+            <input type="text" placeholder="Search for...">
+            <button id="go-btn"><a href="">go!</a></button>
+        </div>
+
+        <!-- Link for contact, registration and login -->
+        <div class="nav-dir">
+            <div>
+                <a href="">Contact us</a>
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+            </div>
+        </div>
+
+        <!-- More navigation options-->
+        <div class="nav-bar">
+            <div>
+                <a href="/homePage">
+                    <!-- Brand logo image -->
+                    <img src="../images/XpressConnect.png" class="logo" alt="XpressConnect logo">
+                </a>
+            </div>
+
+            <a href="/homePage">Home</a>
+            <a href="/buyAirtime">Buy Airtime</a>
+            <a href="/buyData">Buy Databundle</a>
+            <a href="">Data Money</a>
+            <a href="">Transfer Money</a>
+            <div class="dropdown">
+                <a href="">More Options</a>
+                <ul class="dropdown-content">
+                    <a href="">
+                        <li>Print Recharge Card</li>
+                    </a>
+                    <a href="">
+                        <li>Payment Notification</li>
+                    </a>
+                </ul>
+            </div>
+
+
+            <!-- icon with Jquery functionality for quick search-->
+            <a href="#" class="search-btn">🔍</a>
+        </div>
+    </div>
+
+    <div class="section-bagr">
+        <!-- Welcome text with brief tips of service offer-->
+        <h2>Welcome to XpressConnect</h2>
+        <p>We provide an instant airtime, print recharge card and payment notification.</p>
+
+        <!-- Button for navigating to the login and registration page-->
+        <button><a href="/login">login</a></button>
+        <button><a href="/register">register</a></button>
+    </div>
+
+    <div class="partner-icon">
+        <!-- Partners with their logo-->
+        <h2>Our partner</h2>
+        <img src="../images/airtel icon.png" alt="Airtel partner icon">
+        <img src="../images/etisalat icon.png" alt="Etisalat partner icon">
+        <img src="../images/glo icon.png" alt="Glo partner icon">
+        <img src="../images/mtn icon.png" alt="Mtn partner icon">
+    </div>
+
+    <div class="servcon">
+        <!-- Container expatiating more on services and contact information-->
+        <div class="servcon-img">
+            <a href="/homePage">
+                <!-- Brand logo image -->
+                <img src="../images/XpressConnect.png" class="logo" alt="XpressConnect logo"
+                    style="margin: 40px 0px 0px 40px">
+            </a>
+        </div>
+        <hr>
+        <div class="service">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Temporibus ea nam eligendi reprehenderit culpa <br>
+                consectetur dolorem mollitia harum totam repellendus?</p>
+            <!-- Phone to contact-->
+            <p>Call: 09075579806 or 09030018561</p>
+            <div>Contact us via <br>
+                <!-- Social media platform to reach us-->
+                <span>linkedin: <a href="https://www.linkedin.com/in/sikiru-yaya-korede-788871237/">Skycode</a>
+                    <a href="https://www.linkedin.com/in/adedipupo-oludare-666822a0/">Adexoludare</a>
+                    <a href="https://www.linkedin.com/in/Adanne33">Gladys</a>
+                </span> <br>
+                <span>Github: <a href="https://github.com/Brightsky2394/DataSalePoint">Skycode</a>
+                    <a href="https://github.com/adexoludare?tab=repositories&q=&type=&language=&sort=">Adexoludare</a>
+                    <a href="https://github.com/adanne33?tab=repositories">Gladys</a>
+                </span> <br>
+                <span>Twitter: <a href="https://twitter.com/SikiruYaya">Skycode</a>
+                    <a href="https://twitter.com/adexoludare">Adexoludare</a>
+                    <a href="">Gladys</a>
+                </span> <br>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer of the webpage-->
+        <div class="term-policy">
+            <span>&copy Copyright 2023 | XpressConnect</span>
+            <div>
+                <a href="">Terms of use</a> <span id="separator">|</span> <a href="">Privacy Policy</a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
