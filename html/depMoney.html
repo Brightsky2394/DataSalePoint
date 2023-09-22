@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Deposit Money</title>
-        <link rel="stylesheet" href="depMoney.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="homePage.js"></script>
-        <script src="buy.js"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Money</title>
+    <link rel="stylesheet" href="/depMoney.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/script/homePage.js"></script>
+    <script src="/script/buy.js"></script>
+</head>
+
 <body>
     <header>
         <div class="header-container">
@@ -19,38 +21,43 @@
             <div class="nav-dir">
                 <span>
                     <a href="">Contact us</a>
-                    <a href="LogPage.html">Register</a>
-                    <a href="LogPage.html">Log in</a>
+                    <a href="/register">Register</a>
+                    <a href="/login">Log in</a>
                 </span>
             </div>
             <div class="nav-bar">
-                <span>
-                    <a href="HomePage.html">
-                    <img src="images/XpressConnect.png" class="logo" alt="XpressConnect logo" width="54" height="auto">
+                <div>
+                    <a href="/homePage">
+                        <img src="../images/XpressConnect.png" class="logo" alt="XpressConnect logo" width="54"
+                            height="auto">
                     </a>
-                    <a href="HomePage.html">Home</a>
-                    <a href="buyAirtime.html">Buy Airtime</a>
-                    <a href="buyData.html">Buy Databundle</a>
-                    <a href="depMoney.html">Data Money</a>
-                    <a href="depMoney.html">Transfer Money</a>
-                    <a href="">
-                        <form action="">
-                            <label for=""><button>More Options</button></label>
-                            <select name="" id="">
-                                <option value="">Print Recharge Card</option>
-                                <option value="">Payment Notification</option>
-                            </select>
-                        </form>
-                    </a>
-                    <a href="#" class="search-btn">🔍</a>
-                </span>
+                </div>
+
+                <a href="/homePage">Home</a>
+                <a href="/buyAirtime">Buy Airtime</a>
+                <a href="/buyData">Buy Databundle</a>
+                <a href="/depMoney">Deposit Money</a>
+                <a href="">Transfer Money</a>
+                <div class="dropdown">
+                    <a href="">More Options</a>
+                    <ul class="dropdown-content">
+                        <a href="">
+                            <li>Print Recharge Card</li>
+                        </a>
+                        <a href="">
+                            <li>Payment Notification</li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="#" class="search-btn">🔍</a>
+
             </div>
         </div>
     </header>
     <main>
         <div class="section-bagr">
             <span id="home">
-                <a href="HomePage.html">home</a>
+                <a href="/homePage">home</a>
             </span>
             <span id="separator">/</span>
             <span id="login">Data Money</span>
@@ -58,113 +65,144 @@
                 <div class="depositMoney-field">
                     <h2>Fund Your Wallet</h2>
                     <div class="form-group">
-                        <label class="control-label" for="txtAmount" name="lblAmount" id="lblAmount">Amount to Deposit</label>
-                        <input class="form-control input-md" type="text" name="txtAmount" id="txtAmount" onchange="GetFee();" onmouseup="GetFee();" value="">
-                    </div>                                	
+                        <label class="control-label" for="txtAmount" name="lblAmount" id="lblAmount">Amount to
+                            Deposit</label>
+                        <input class="form-control input-md" type="text" name="txtAmount" id="txtAmount"
+                            onchange="GetFee();" onmouseup="GetFee();" value="">
+                    </div>
                     <div class="form-group">
                         <label class="control-label" for="cboPaymentOption">Choose how you will pay</label>
-                        <select class="form-control" name="cboPaymentOption" id="cboPaymentOption" onchange="LoadData()" onmouseup="LoadData()" size="1">
-                            <option value="-Select-">-Select-</option>																						
-                            <!--<option value="InternetTransfer">Internet Bank Transfer - no extra fee (auto credit)</option>-->											
-                            <!--<option value="E-Voucher">E-Voucher PIN - no extra fee (auto credit)</option>-->											
-                            <!--<option value="AirTime">Recharge PIN</option>-->											
-                            
-                                        <option value="ATMCard2">ATM Card (interswitch 1.5%) - N100.00 to N9,500.00</option>
-                                    
-                                    <option value="BankDeposit">Cash Deposit or Mobile/Internet Bank Transfer (instant) - N100.00 to N5,000,000.00</option>
-                                
-                                <!--
+                        <select class="form-control" name="cboPaymentOption" id="cboPaymentOption" onchange="LoadData()"
+                            onmouseup="LoadData()" size="1">
+                            <option value="-Select-">-Select-</option>
+                            <!--<option value="InternetTransfer">Internet Bank Transfer - no extra fee (auto credit)</option>-->
+                            <!--<option value="E-Voucher">E-Voucher PIN - no extra fee (auto credit)</option>-->
+                            <!--<option value="AirTime">Recharge PIN</option>-->
+
+                            <option value="ATMCard2">ATM Card (interswitch 1.5%) - N100.00 to N9,500.00</option>
+
+                            <option value="BankDeposit">Cash Deposit or Mobile/Internet Bank Transfer (instant) -
+                                N100.00 to N5,000,000.00</option>
+
+                            <!--
                                 <option value="AirTimeTransfer">AirTime Transfer - Not Allowed</option>
-                                -->                           
-                            
-                        </select>			                            	                                
-                    </div> 
+                                -->
+
+                        </select>
+                    </div>
                     <div class="form-group">
-                        <label class="control-label" for="cboBankName" name="lblBankName" id="lblBankName" style="DISPLAY: none;">Pay into</label>
-                        <select class="form-control" name="cboBankName" id="cboBankName" onchange="LoadAccountNo()" onmouseup="LoadAccountNo()" style="DISPLAY: none;">
+                        <label class="control-label" for="cboBankName" name="lblBankName" id="lblBankName"
+                            style="DISPLAY: none;">Pay into</label>
+                        <select class="form-control" name="cboBankName" id="cboBankName" onchange="LoadAccountNo()"
+                            onmouseup="LoadAccountNo()" style="DISPLAY: none;">
                             <option selected="">-Select-</option>
                             <option value="First Bank Of Nigeria Plc">FBN - First Bank Of Nigeria Plc</option>
                             <!--<option value="Access Bank Plc">Access Bank Plc</option>-->
                             <!--<option value="Diamond Bank Plc">Diamond Bank Plc</option>-->
-                            <!--<option value="Fidelity Bank Plc">Fidelity Bank Plc</option>-->	
+                            <!--<option value="Fidelity Bank Plc">Fidelity Bank Plc</option>-->
                             <!--<option value="First Bank Of Nigeria Plc">FBN - First Bank Of Nigeria Plc</option>	-->
-                            <!--<option value="First City Monument Bank Plc">FCMB - First City Monument Bank Plc</option>	-->																		
+                            <!--<option value="First City Monument Bank Plc">FCMB - First City Monument Bank Plc</option>	-->
                             <!--<option value="Guaranty Trust Bank Plc">GTB - Guaranty Trust Bank Plc</option>-->
-                            <!--<option value="Heritage Bank">Heritage Bank</option>-->												
+                            <!--<option value="Heritage Bank">Heritage Bank</option>-->
                             <!--<option value="Skye Bank Plc">Skye Bank Plc</option>-->
                             <!--<option value="Stanbic IBTC Bank Plc">Stanbic IBTC Bank Plc</option>-->
-                            <!--<option value="United Bank For Africa Plc">UBA - United Bank For Africa Plc</option>-->											
+                            <!--<option value="United Bank For Africa Plc">UBA - United Bank For Africa Plc</option>-->
                         </select>
-                        <label name="lblBTCRate" id="lblBTCRate" style="DISPLAY: none;">0$=0BTC</label>			                            	                                
-                    </div>		                            
-                    <div class="form-group">
-                        <label class="control-label" for="txtFee" name="lblFee" id="lblFee" style="DISPLAY: none;">Fee</label>
-                        <input class="form-control input-md" type="text" name="txtFee" id="txtFee" style="DISPLAY: none;">
-                        <label for="txtFee2" name="lblFee2" id="lblFee2" style="DISPLAY: none;"><br>
-                            Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below N1,000.00 and 10% for deposit of N1,000.00 and above.
-                        </label>										
+                        <label name="lblBTCRate" id="lblBTCRate" style="DISPLAY: none;">0$=0BTC</label>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="txtAmountBTC" name="lblAmountBTC" id="lblAmountBTC" style="DISPLAY: none;">You will send (BTC)</label>
-                        <input class="form-control input-md" type="text" name="txtAmountBTC" id="txtAmountBTC" style="DISPLAY: none;">										
-                    </div>		
+                        <label class="control-label" for="txtFee" name="lblFee" id="lblFee"
+                            style="DISPLAY: none;">Fee</label>
+                        <input class="form-control input-md" type="text" name="txtFee" id="txtFee"
+                            style="DISPLAY: none;">
+                        <label for="txtFee2" name="lblFee2" id="lblFee2" style="DISPLAY: none;"><br>
+                            Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below N1,000.00 and
+                            10% for deposit of N1,000.00 and above.
+                        </label>
+                    </div>
                     <div class="form-group">
-                        <label class="control-label" for="txtTotal" name="lblTotal" id="lblTotal" style="DISPLAY: none;">Your wallet will be credited with</label>
-                        <input class="form-control input-md" type="text" name="txtTotal" id="txtTotal" style="DISPLAY: none;">										
-                    </div>	
+                        <label class="control-label" for="txtAmountBTC" name="lblAmountBTC" id="lblAmountBTC"
+                            style="DISPLAY: none;">You will send (BTC)</label>
+                        <input class="form-control input-md" type="text" name="txtAmountBTC" id="txtAmountBTC"
+                            style="DISPLAY: none;">
+                    </div>
                     <div class="form-group">
-                        <label class="control-label" for="cboMobileNetwork" name="lblMobileNetwork" id="lblMobileNetwork" style="DISPLAY: none;">Mobile Network</label>
-                        <select class="form-control" name="cboMobileNetwork" id="cboMobileNetwork" onchange="LoadData()" onmouseup="LoadData()" style="DISPLAY: none;" size="1">
+                        <label class="control-label" for="txtTotal" name="lblTotal" id="lblTotal"
+                            style="DISPLAY: none;">Your wallet will be credited with</label>
+                        <input class="form-control input-md" type="text" name="txtTotal" id="txtTotal"
+                            style="DISPLAY: none;">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="cboMobileNetwork" name="lblMobileNetwork"
+                            id="lblMobileNetwork" style="DISPLAY: none;">Mobile Network</label>
+                        <select class="form-control" name="cboMobileNetwork" id="cboMobileNetwork" onchange="LoadData()"
+                            onmouseup="LoadData()" style="DISPLAY: none;" size="1">
                             <option selected="">-Select-</option>
-                            <option value="MTN">MTN</option>	
-                        </select>		                                
-                    </div>			                        		                        	                        	
+                            <option value="MTN">MTN</option>
+                        </select>
+                    </div>
                     <div class="form-group">
-                        <label class="control-label" for="txtAirTimePIN" name="lblAirTimePIN" id="lblAirTimePIN" style="DISPLAY: none;">PIN</label><label class="control-label" name="lblAirTimePIN2" id="lblAirTimePIN2" style="DISPLAY: none;"> (Enter one PIN per line)</label>		                                
-                        <textarea class="form-control input-md" name="txtAirTimePIN" id="txtAirTimePIN" maxlength="68" style="DISPLAY: none;"></textarea>										
-                        
+                        <label class="control-label" for="txtAirTimePIN" name="lblAirTimePIN" id="lblAirTimePIN"
+                            style="DISPLAY: none;">PIN</label><label class="control-label" name="lblAirTimePIN2"
+                            id="lblAirTimePIN2" style="DISPLAY: none;"> (Enter one PIN per line)</label>
+                        <textarea class="form-control input-md" name="txtAirTimePIN" id="txtAirTimePIN" maxlength="68"
+                            style="DISPLAY: none;"></textarea>
+
                         <label name="lblAirTimeTransferEtisalat" id="lblAirTimeTransferEtisalat" style="DISPLAY: none;">
                             <font style="font-size: 10pt" face="Verdana">
-                                Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below N1,000.00 and 10% for deposit of N1,000.00 and above.
+                                Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below N1,000.00
+                                and 10% for deposit of N1,000.00 and above.
                                 <br><br><b>Transfer Airtime from your Etisalat line to <b>08171725058</b>
-                                <br><b>How to Transfer Airtime</b><br><b>Dial:</b> *223*0000*amount*08171725058#
-                            </b></font><b>
-                        </b></label><b>
-                        
-                        <label name="lblAirTimeTransferMTN" id="lblAirTimeTransferMTN" style="DISPLAY: none;">
-                        
-                            <font style="font-size: 10pt" face="Verdana">
-                                Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below N1,000.00 and 10% for deposit of N1,000.00 and above.	
-                                <br><br><b>Transfer Airtime from your MTN line to <b>08164235314</b>
-                                <br><b>How to Transfer Airtime</b>
-                                <br><b>Dial:</b> *600*08164235314*amount*PIN#
-                                <br><b>If you don't have a PIN, </b>to use 1234 as your PIN
-                                <br><b>Dial:</b> *600*0000*1234*1234#	
-                            </b></font><b>
-                        
-                        </b></label><b>		                                
-                    </b></b></div><b><b>
-                    <div class="form-group">
-                        <label class="control-label" for="txtAccountNo" name="lblAccountNo" id="lblAccountNo" style="DISPLAY: none;">Your DYA Phone Number</label>
-                        <input class="form-control input-md" type="text" name="txtAccountNo" id="txtAccountNo" style="DISPLAY: none;">										
-                    </div>		                            
-                    <div class="form-group">
-                        <button type="submit" class="btn-proceed" name="cmdSubmit" id="cmdSubmit" value="Click to Proceed" onclick="this.style.visibility='hidden';document.getElementById('imgLoader').style.visibility='visible';return validateForm1();">Click to Proceed</button>
-                        <img name="imgLoader" id="imgLoader" style="visibility: hidden;" src="images/loader.gif" width="25" height="25">
-                    </div>
-                    <!--<label>Note: if you experience any technical issues with ATM Card (flutterwave), please retry using ATM Card (interswitch)</label>-->		                            
-                    <!--/Form-->
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                
-                        </div>
-                    </div>		
-                    </b></b>
+                                    <br><b>How to Transfer Airtime</b><br><b>Dial:</b> *223*0000*amount*08171725058#
+                                </b>
+                            </font><b>
+                            </b>
+                        </label><b>
+
+                            <label name="lblAirTimeTransferMTN" id="lblAirTimeTransferMTN" style="DISPLAY: none;">
+
+                                <font style="font-size: 10pt" face="Verdana">
+                                    Using Airtime/RechargePIN will now attract a fee of N100.00 for deposit below
+                                    N1,000.00 and 10% for deposit of N1,000.00 and above.
+                                    <br><br><b>Transfer Airtime from your MTN line to <b>08164235314</b>
+                                        <br><b>How to Transfer Airtime</b>
+                                        <br><b>Dial:</b> *600*08164235314*amount*PIN#
+                                        <br><b>If you don't have a PIN, </b>to use 1234 as your PIN
+                                        <br><b>Dial:</b> *600*0000*1234*1234#
+                                    </b>
+                                </font><b>
+
+                                </b>
+                            </label><b>
+                            </b></b>
+                    </div><b><b>
+                            <div class="form-group">
+                                <label class="control-label" for="txtAccountNo" name="lblAccountNo" id="lblAccountNo"
+                                    style="DISPLAY: none;">Your DYA Phone Number</label>
+                                <input class="form-control input-md" type="text" name="txtAccountNo" id="txtAccountNo"
+                                    style="DISPLAY: none;">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn-proceed" name="cmdSubmit" id="cmdSubmit"
+                                    value="Click to Proceed"
+                                    onclick="this.style.visibility='hidden';document.getElementById('imgLoader').style.visibility='visible';return validateForm1();">Click
+                                    to Proceed</button>
+                                <img name="imgLoader" id="imgLoader" style="visibility: hidden;" src="images/loader.gif"
+                                    width="25" height="25">
+                            </div>
+                            <!--<label>Note: if you experience any technical issues with ATM Card (flutterwave), please retry using ATM Card (interswitch)</label>-->
+                            <!--/Form-->
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                </div>
+                            </div>
+                        </b></b>
                 </div>
             </div>
 
         </div>
-        
+
     </main>
     <footer>
         <!-- Footer of the webpage-->
@@ -176,8 +214,7 @@
 
         </div>
     </footer>
-    
-</body>
-</html>
 
-  
+</body>
+
+</html>
