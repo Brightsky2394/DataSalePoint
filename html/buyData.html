@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Buy Databundle Page</title>
-        <link rel="stylesheet" href="buyData.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="homePage.js"></script>
-        <script src="buy.js"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Databundle Page</title>
+    <link rel="stylesheet" href="/buyData.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/script/homePage.js"></script>
+    <script src="/script/buy.js"></script>
+</head>
+
 <body>
     <header>
         <div class="header-container">
@@ -19,38 +21,43 @@
             <div class="nav-dir">
                 <span>
                     <a href="">Contact us</a>
-                    <a href="LogPage.html">Register</a>
-                    <a href="LogPage.html">Log in</a>
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
                 </span>
             </div>
             <div class="nav-bar">
-                <span>
+                <div>
                     <a href="HomePage.html">
-                    <img src="images/XpressConnect.png" class="logo" alt="XpressConnect logo" width="54" height="auto">
+                        <img src="images/XpressConnect.png" class="logo" alt="XpressConnect logo" width="54"
+                            height="auto">
                     </a>
-                    <a href="HomePage.html">Home</a>
-                    <a href="buyAirtime.html">Buy Airtime</a>
-                    <a href="buyData.html">Buy Databundle</a>
-                    <a href="depMoney.html">Data Money</a>
-                    <a href="depMoney.html">Transfer Money</a>
-                    <a href="">
-                        <form action="">
-                            <label for=""><button>More Options</button></label>
-                            <select name="" id="">
-                                <option value="">Print Recharge Card</option>
-                                <option value="">Payment Notification</option>
-                            </select>
-                        </form>
-                    </a>
-                    <a href="#" class="search-btn">🔍</a>
-                </span>
+                </div>
+
+                <a href="/homePage">Home</a>
+                <a href="/buyAirtime">Buy Airtime</a>
+                <a href="/buyData">Buy Databundle</a>
+                <a href="/depMoney">Data Money</a>
+                <a href="/depMoney">Transfer Money</a>
+                <div class="dropdown">
+                    <a href="">More Options</a>
+                    <ul class="dropdown-content">
+                        <a href="">
+                            <li>Print Recharge Card</li>
+                        </a>
+                        <a href="">
+                            <li>Payment Notification</li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="#" class="search-btn">🔍</a>
+
             </div>
         </div>
     </header>
     <main>
         <div class="section-bagr">
             <span id="home">
-                <a href="HomePage.html">home</a>
+                <a href="/homePage">home</a>
             </span>
             <span id="separator">/</span>
             <span id="login">Buy Databundle</span>
@@ -59,48 +66,59 @@
                     <h2>Buy Databundle</h2>
                     <div class="form-group">
                         <label class="control-label" for="city">Mobile Network</label>
-                        <select name="cboMobileNetwork" id="cboMobileNetwork" onchange="GetAmount()" onmouseup="GetAmount()" class="form-control" size="1">
-                            
-                                <option>-Select-</option>		                                            
-                                                                        
+                        <select name="cboMobileNetwork" id="cboMobileNetwork" onchange="GetAmount()"
+                            onmouseup="GetAmount()" class="form-control" size="1">
+
+                            <option>-Select-</option>
+
                             <option value="MTN">MTN</option>
                             <option value="AirTel">AirTel</option>
-                            <option value="GLO">GLO</option>		                                    
+                            <option value="GLO">GLO</option>
                             <option value="Etisalat">9mobile</option>
-                            <option value="smile-direct">Smile</option>				                                    		                                    		                                    
-                            <option value="spectranet">Spectranet</option>				                                    		                                    		                                    
+                            <option value="smile-direct">Smile</option>
+                            <option value="spectranet">Spectranet</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="city" name="lblDataSpeed" id="lblDataSpeed" style="DISPLAY: none;">Data Speed</label>
-                        <select name="cboDataSpeed" id="cboDataSpeed" style="DISPLAY: none;" tabindex="3" onchange="GetAmount();" onmouseup="GetAmount()" class="form-control">
-                            <!--<option>-Select-</option>-->		                                            
+                        <label class="control-label" for="city" name="lblDataSpeed" id="lblDataSpeed"
+                            style="DISPLAY: none;">Data Speed</label>
+                        <select name="cboDataSpeed" id="cboDataSpeed" style="DISPLAY: none;" tabindex="3"
+                            onchange="GetAmount();" onmouseup="GetAmount()" class="form-control">
+                            <!--<option>-Select-</option>-->
                             <option value="3G">3G</option>
-                            <option value="4G">4G</option>		
+                            <option value="4G">4G</option>
                         </select>
-                    </div>	
+                    </div>
                     <div class="form-group">
                         <label class="control-label" for="city">Databundle Plan</label>
-                        <select name="cboDataBundle" id="cboDataBundle" tabindex="3" onchange="GetAmount2();" onmouseup="GetAmount2()" class="form-control">                                               
+                        <select name="cboDataBundle" id="cboDataBundle" tabindex="3" onchange="GetAmount2();"
+                            onmouseup="GetAmount2()" class="form-control">
                         </select>
-                    </div>		                            	                            
-                    <div class="form-group">
-                        <label class="control-label" for="txtDataBundlePhoneNo">Mobile </label>		                                
-                        <label class="control-label" for="txtDataBundlePhoneNo">umbers<a href="InfoBuyMultiple.asp" target="_blank"></a></label><textarea name="txtDataBundlePhoneNo" id="txtDataBundlePhoneNo" class="form-control input-md"></textarea><font size="2">Enter 
-                        one mobile number per line or separate 
-                        with comma e.g. 09062547110, 08149659347</font>
-                    </div>		                            
-                    <div class="form-group">
-                        <label class="control-label" for="txtAmount">Amount</label>  
-                        <font color="#FF0000"><label name="lblDiscount" id="lblDiscount" style="DISPLAY: none;"><b>5% Discount</b></label></font><label name="lblDiscount2" id="lblDiscount2" style="DISPLAY: none;">5% Discount</label>										
-                        <input tabindex="1" type="text" readonly="true" name="txtAmount" id="txtAmount" value="" class="form-control input-md">
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="cboAutoRenew">Auto renew <a href="TernsAndConditionsBuyMultiple.asp" target="_blank"></a></label>		                                
+                        <label class="control-label" for="txtDataBundlePhoneNo">Mobile </label>
+                        <label class="control-label" for="txtDataBundlePhoneNo">umbers<a href="InfoBuyMultiple.asp"
+                                target="_blank"></a></label><textarea name="txtDataBundlePhoneNo"
+                            id="txtDataBundlePhoneNo" class="form-control input-md"></textarea>
+                        <font size="2">Enter
+                            one mobile number per line or separate
+                            with comma e.g. 09062547110, 08149659347</font>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="txtAmount">Amount</label>
+                        <font color="#FF0000"><label name="lblDiscount" id="lblDiscount" style="DISPLAY: none;"><b>5%
+                                    Discount</b></label></font><label name="lblDiscount2" id="lblDiscount2"
+                            style="DISPLAY: none;">5% Discount</label>
+                        <input tabindex="1" type="text" readonly="true" name="txtAmount" id="txtAmount" value=""
+                            class="form-control input-md">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="cboAutoRenew">Auto renew <a
+                                href="TernsAndConditionsBuyMultiple.asp" target="_blank"></a></label>
                         <select size="1" name="cboAutoRenew" id="cboAutoRenew" tabindex="6" class="form-control">
-                            
-                                <option value="0" selected="">No</option>
-                                                                                                                
+
+                            <option value="0" selected="">No</option>
+
                             <option value="30">Monthly</option>
                             <option value="21">Every 3 Weeks</option>
                             <option value="14">Every 2 Weeks</option>
@@ -110,14 +128,18 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn-buyNow" name="cmdSubmit" id="cmdSubmit" value="Click to Proceed" onclick="this.style.visibility='hidden';document.getElementById('imgLoader').style.visibility='hidden';return validateForm1();">Buy Now</button>
-                        <img name="imgLoader" id="imgLoader" style="visibility: hidden;" src="images/loader.gif" width="25" height="25">
+                        <button type="submit" class="btn-buyNow" name="cmdSubmit" id="cmdSubmit"
+                            value="Click to Proceed"
+                            onclick="this.style.visibility='hidden';document.getElementById('imgLoader').style.visibility='hidden';return validateForm1();">Buy
+                            Now</button>
+                        <img name="imgLoader" id="imgLoader" style="visibility: hidden;" src="images/loader.gif"
+                            width="25" height="25">
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        
+
     </main>
     <footer>
         <!-- Footer of the webpage-->
@@ -129,8 +151,9 @@
 
         </div>
     </footer>
-    
+
 </body>
+
 </html>
 <!--MTN
 <select name="cboDataBundle" id="cboDataBundle" tabindex="3" onchange="GetAmount2();" onmouseup="GetAmount2()" class="form-control">
@@ -191,7 +214,7 @@
 
 </select>
      -->
-    
+
 <!--Glo
 <select name="cboDataBundle" id="cboDataBundle" tabindex="3" onchange="GetAmount2();" onmouseup="GetAmount2()" class="form-control">
 		                                	                    		
